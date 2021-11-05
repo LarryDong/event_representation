@@ -27,7 +27,9 @@ Some popular representation and their demo codes.
 
 $$image(x,y; t) = exp(-|t-T(x,y)| / \tau)$$
 
-where $\tau$ is a tunable parameter that depends on the motion in the scene. `t` is the reference time, which could be 'local' or 'global'
+where $\tau$ is a tunable parameter that depends on the motion in the scene. `t` is the reference time, which could be 'local' or 'global'.
+
+Check [this paper](https://www.neuromorphic-vision.com/public/publications/1/publication.pdf) for more details. 
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/LarryDong/event_representation/main/figure/time_surface.jpg" width="480" height="360" alt="time_surface"/><br/>
@@ -35,4 +37,4 @@ where $\tau$ is a tunable parameter that depends on the motion in the scene. `t`
 
 
 ## Acknowledgement
-Some codes are inspired by TU Berlin's Course: (https://github.com/tub-rip/events_viz)[https://github.com/tub-rip/events_viz]  
+Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/events_viz](https://github.com/tub-rip/events_viz)
