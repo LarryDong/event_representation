@@ -33,3 +33,6 @@ where $\tau$ is a tunable parameter that depends on the motion in the scene. `t`
 <img src="https://raw.githubusercontent.com/LarryDong/event_representation/main/figure/time_surface.jpg" width="480" height="360" alt="time_surface"/><br/>
 </div>
 
+
+## Acknowledgement
+Some codes are inspired by TU Berlin's Course: (https://github.com/tub-rip/events_viz)[https://github.com/tub-rip/events_viz]  
