@@ -21,7 +21,7 @@ Some popular representation and their demo codes.
 
 **time-surface** is also caled **surface of active events**, which include both `spatio` and `temporal` information. The value of each pixel should be 
 
-$ image(x,y; t) = exp(-|t-T(x,y)| / \tau) $
+$image(x,y; t) = exp(-|t-T(x,y)| / \tau)$
 
 where $\tau$ is a tunable parameter that depends on the motion in the scene. `t` is the reference time, which could be 'local' or 'global'
 
