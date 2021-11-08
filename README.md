@@ -6,7 +6,7 @@ Some popular representation and their demo codes.
 **If you see other representation (paper or code),  please tell me or make a pull request to this repo. Many thanks**
 
 
-## Current Presentation 
+# Current Presentation 
 
 ### event frame
 **Event frame** is the simplest representation. Considering polarity, each pixel in image would only be `+1/0/-1`, which means a `positive/no/negative` event occurs here.  
@@ -37,5 +37,13 @@ Check [this paper](https://www.neuromorphic-vision.com/public/publications/1/pub
 </div>
 
 
-## Acknowledgement
+# TODO:
+- C++ version may be added later.
+- Some other presentations would be added later. Includes:  
+**spatiol-temporal voxel grid**: proposed by Alex Zhu's [paper](https://openaccess.thecvf.com/content_eccv_2018_workshops/w36/html/Zhu_Unsupervised_Event-based_Optical_Flow_using_Motion_Compensation_ECCVW_2018_paper.html) and used in many framework like `e2vid`
+
+
+
+
+# Acknowledgement
 Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/events_viz](https://github.com/tub-rip/events_viz)
