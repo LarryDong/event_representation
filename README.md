@@ -24,16 +24,23 @@ Some popular representation and their demo codes.
 
 
 ### time-surface | surface of active events
-**Time-surface** is also caled **surface of active events**, which include both `spatio` and `temporal` information. The value of each pixel should be 
-
-$$image(x,y; t) = exp(-|t-T(x,y)| / \tau)$$
-
-where $\tau$ is a tunable parameter that depends on the motion in the scene. `t` is the reference time, which could be 'local' or 'global'.
-
+**Time-surface** is also caled **surface of active events**, which include both `spatio` and `temporal` information. The value of each pixel should be $$image(x,y; t) = exp(-|t-T(x,y)| / \tau)$$, where $\tau$ is a tunable parameter that depends on the motion in the scene. `t` is the reference time, which could be 'local' or 'global'.  
 Check [this paper](https://www.neuromorphic-vision.com/public/publications/1/publication.pdf) for more details. 
+
+**Draw time-surface in 2d image**
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/LarryDong/event_representation/main/figure/time_surface.jpg" width="480" height="360" alt="time_surface"/><br/>
+</div>
+
+**Draw time-surface as a 3d grid**
+
+To plot time surface in a 3d grid, check `plot_3d_grid.py` file.  
+Attention that plot 3d grid needs much memory, so just try to plot a patch in full image.  
+Also, since the global reference time is used for whole image, the local time-surface may be not "smooth". 
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/LarryDong/event_representation/main/figure/3dts-sample.png" width="9600" height="480" alt="time_surface"/><br/>
 </div>
 
 
