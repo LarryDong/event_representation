@@ -16,7 +16,7 @@ Some popular representation and their demo codes.
 
 
 ### event accumulate frame
-**Event accumulate frame** is sometimes called **event intensity frame**. Each pixel would be a number that indicate the intensity. For a uint8 image, the range would be (0, 255), where 128 means no events (or the same number of positive/negative events), >128 means more positive events occurred here, and vice versa.
+**Event accumulate frame** is sometimes called **event intensity frame**, or **histogram of events[1]**. Each pixel would be a number that indicate the intensity. For a uint8 image, the range would be (0, 255), where 128 means no events (or the same number of positive/negative events), >128 means more positive events occurred here, and vice versa.
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/LarryDong/event_representation/main/figure/event_accumulate_frame.jpg" width="480" height="360" alt="event accumulate frame"/><br/>
@@ -47,10 +47,15 @@ Also, since the global reference time is used for whole image, the local time-su
 # TODO:
 - C++ version may be added later.
 - Some other presentations would be added later. Includes:  
-**spatiol-temporal voxel grid**: proposed by Alex Zhu's [paper](https://openaccess.thecvf.com/content_eccv_2018_workshops/w36/html/Zhu_Unsupervised_Event-based_Optical_Flow_using_Motion_Compensation_ECCVW_2018_paper.html) and used in many framework like `e2vid`
+**spatiol-temporal voxel grid**: proposed by Alex Zhu's [paper](https://openaccess.thecvf.com/content_eccv_2018_workshops/w36/html/Zhu_Unsupervised_Event-based_Optical_Flow_using_Motion_Compensation_ECCVW_2018_paper.html)[2] and used in many framework like `e2vid`
 
 
 
 
 # Acknowledgement
 Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/events_viz](https://github.com/tub-rip/events_viz)
+
+
+# Reference 
+[1]. Liu et al., Adaptive Time-Slice Block-Matching Optical Flow Algorithm for Dynamic Vision Sensors, BMVC 2018  
+[2]. Zihao Zhu, et al. Unsupervised Event-based Optical Flow using Motion Compensation, ECCVW 2018
