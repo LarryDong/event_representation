@@ -44,11 +44,20 @@ Also, since the global reference time is used for whole image, the local time-su
 </div>
 
 
+### spatiol-temporal voxel grid
+**spatiol-temporal voxel grid**, sometimes called **Stacking Based on Time(SBT)**, **Stacking Based on Number(SBN)**.   
+
+First proposed by Alex Zhu's [paper](https://openaccess.thecvf.com/content_eccv_2018_workshops/w36/html/Zhu_Unsupervised_Event-based_Optical_Flow_using_Motion_Compensation_ECCVW_2018_paper.html)[2].
+Widely used in learning-methods to "**stacking**", such as `E2VID`[3], reconstruction method[4] and HDR imaging[5].
+
+These methods all stack events into frames for networking processing, but may be slightly different. In Zhu's method (and E2VID's), timestamp information are reserved when drawing the gray-scale image, but **SBT/SBN** in [4] only accumulate polarity ignoring the timestamps, and in [5] positive and negative polarity stacking are separated and frames are doubled. How to stack depends mainly on the network architecture I guess.
+
+No reference codes now. Will be add if I find an elegant implementation.
+
+
 # TODO:
 - C++ version may be added later.
-- Some other presentations would be added later. Includes:  
-**spatiol-temporal voxel grid**: proposed by Alex Zhu's [paper](https://openaccess.thecvf.com/content_eccv_2018_workshops/w36/html/Zhu_Unsupervised_Event-based_Optical_Flow_using_Motion_Compensation_ECCVW_2018_paper.html)[2] and used in many framework like `e2vid`
-
+- Some other presentations would be added later.
 
 
 
@@ -58,4 +67,7 @@ Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/event
 
 # Reference 
 [1]. Liu et al., Adaptive Time-Slice Block-Matching Optical Flow Algorithm for Dynamic Vision Sensors, BMVC 2018  
-[2]. Zihao Zhu, et al. Unsupervised Event-based Optical Flow using Motion Compensation, ECCVW 2018
+[2]. Zihao Zhu, et al. Unsupervised Event-based Optical Flow using Motion Compensation, ECCVW 2018  
+[3]. H. Rebecq, R. Ranftl, V. Koltun and D. Scaramuzza, "High Speed and High Dynamic Range Video with an Event Camera," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 43, no. 6, pp. 1964-1980, 1 June 2021, doi: 10.1109/TPAMI.2019.2963386.  
+[4]. Mostafavi, M., Wang, L. & Yoon, KJ. Learning to Reconstruct HDR Images from Events, with Applications to Depth and Flow Prediction. Int J Comput Vis 129, 900–920 (2021).  
+[5]. Yunhao Zou; Yinqiang Zheng; Tsuyoshi Takatani; Ying Fu: Learning To Reconstruct High Speed and High Dynamic Range Videos From Events.  
