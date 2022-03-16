@@ -1,6 +1,6 @@
 # event_representation
 
-Event-based camera data representation.  
+Event-based camera data representation. (In some papers, also called "**Event Stacking**")  
 Some popular representation and their demo codes.
 
 **If you see other representation (paper or code),  please tell me or make a pull request to this repo. Many thanks**
