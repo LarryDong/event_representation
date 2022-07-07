@@ -51,6 +51,13 @@ The key idea is to use a 3D graph to orgnize event stream for further processing
 Steps: 1. Voxelize the event stream; 2. Select N important voxels (based on the number of events in each voxel) for denoise; 3. Calcuate the 2D histgram as the feature vector in each voxel; 4. The 3D coordinate, and the feature, construct a `Vertex` in a graph; 5. Data association and further processing can be dealed by graph (see paper for more details).
 ![3D-graph representation](https://user-images.githubusercontent.com/14933902/177023036-ad985aa3-7930-4eda-841d-b92437c1b6bc.png)
 
+## Multi-density series of stack
+First proposed by Yeongwoo Nam in CVPR2022 [7] [Paper](https://openaccess.thecvf.com/content/CVPR2022/html/Nam_Stereo_Depth_From_Events_Cameras_Concentrate_and_Focus_on_the_CVPR_2022_paper.html)
+Traditional SBT or SBN methods may cause events overwrite when the scene is dense, especially for autonomous driving. The proposed methods uses M stack and each reserve the half of duration of previous stack. Order events are not preserved since the information is less important the the new ones.  
+The multiple stacks can be further processed by other network (such as 'generate' a sharp map described in [7]).
+![Multi-density series of stack](https://user-images.githubusercontent.com/14933902/177671089-ce35b57d-2a5d-4b9a-9990-bf10f038c3f8.png)
+
+
 
 
 # TODO:
@@ -70,3 +77,4 @@ Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/event
 [4]. Mostafavi, M., Wang, L. & Yoon, KJ. Learning to Reconstruct HDR Images from Events, with Applications to Depth and Flow Prediction. Int J Comput Vis 129, 900–920 (2021).  
 [5]. Yunhao Zou; Yinqiang Zheng; Tsuyoshi Takatani; Ying Fu: Learning To Reconstruct High Speed and High Dynamic Range Videos From Events.  
 [6]. Yongjian Deng, Hao Chen, Hai Liu, Youfu Li; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022, pp. 1172-1181 
+[7]. Nam, Yeongwoo and Mostafavi, Mohammad and Yoon, Kuk-Jin and Choi, Jonghyun; CVPR 2022.
