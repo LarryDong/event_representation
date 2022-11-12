@@ -59,6 +59,13 @@ The multiple stacks can be further processed by other network (such as 'generate
 <img src="https://user-images.githubusercontent.com/14933902/177671089-ce35b57d-2a5d-4b9a-9990-bf10f038c3f8.png" width="640" alt="3D graph"/><br/>
 </div>
 
+## Binary Event History Image (BEHI)
+BEHI representation is first proposed in Wang's IROS2022 paper [11]. This representation draws all events (without polarity) in one frame during the whole histroy time $T$, Defined by: $$I_T(x,y) = (\sum_{i=1}^N[x_i=x, y_i=y, t_i \lt T]) \gt 0$$ 
+<div align=center>
+<img src="https://user-images.githubusercontent.com/14933902/201467925-eeb6b479-2bee-413b-bf76-69fbe95cd05d.png" width="640" alt="BEHI"/><br/>
+</div>
+This representation can be used to predict the future position of a moving object with less data (only 1 binary frame). The above image shows a BEHI when a ball is flying towards a robot camera. Please check the paper for more details (the collision position & time can be estimated by a network).
+
 
 # TODO:
 - C++ version may be added later.
@@ -80,4 +87,4 @@ Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/event
 [7]. Yeongwoo Nam; Mohammad Mostafavi; Kuk-Jin Yoon; Jonghyun Choi: Stereo Depth From Events Cameras: Concentrate and Focus on the Future. CVPR022.  
 [8]. Yin Bi, Aaron Chadha, Alhabib Abbas, Eirina Bourtsoulatze, and Yiannis Andreopoulos. Graph-based object classification for neuromorphic vision sensing. IEEE Int. Conf. Comput. Vis. (ICCV), 2019  
 [9]. Yin Bi, Aaron Chadha, Alhabib Abbas, Eirina Bourtsoulatze, and Yiannis Andreopoulos. Graph-based spatio-temporal feature learning for neuromorphic vision sensing. IEEE Transactions on Image Processing, 29:9084–9098, 2020.  
-[10]. Simon Schaefer; Daniel Gehrig; Davide Scaramuzza: AEGNN: Asynchronous Event-Based Graph Neural Networks. CVPR2022.  
+[10]. Simon Schaefer; Daniel Gehrig; Davide Scaramuzza: AEGNN: Asynchronous Event-Based Graph Neural Networks. CVPR2022. [11]. Wang, Ziyun; Ojeda, Fernando Cladera; Bisulco, Anthony; Lee, Daewon; Taylor, Camillo J.; Daniilidis, Kostas et al. (2022): EV-Catcher: High-Speed Object Catching Using Low-Latency Event-Based Neural Networks. In IEEE Robot. Autom. Lett. 7 (4), pp. 8737–8744. DOI: 10.1109/LRA.2022.3188400. 
