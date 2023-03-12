@@ -66,6 +66,13 @@ BEHI representation is first proposed in Wang's IROS2022 paper [11]. This repres
 </div>
 This representation can be used to predict the future position of a moving object with less data (only 1 binary frame). The above image shows a BEHI when a ball is flying towards a robot camera. Please check the paper for more details (the collision position & time can be estimated by a network).
 
+## Tencode
+Tencode is first proposed in Huang's WACV2023 paper [12]. This method ecnodes both polarity and timestamp into a RGB image. The on/off polarity encode R and B channel, and timestamp encodes the G channel. Given a time duration $\Delta t$, the output frame is defined by: $$F(x,y)=(255, \frac{255(t_{max}-t)}{\Delta t}, 0), if \quad p=1$$ $$F(x,y)=(0, \frac{255(t_{max}-t)}{\Delta t}, 255), if \quad p=0$$
+<div align=center>
+<img src="https://user-images.githubusercontent.com/14933902/224537529-76323c9b-eda2-44f2-b44b-a473a09ac487.png" width="480" alt="Tencode"/><br/>
+</div>
+
+
 
 # TODO:
 - C++ version may be added later.
@@ -88,3 +95,5 @@ Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/event
 [8]. Yin Bi, Aaron Chadha, Alhabib Abbas, Eirina Bourtsoulatze, and Yiannis Andreopoulos. Graph-based object classification for neuromorphic vision sensing. IEEE Int. Conf. Comput. Vis. (ICCV), 2019  
 [9]. Yin Bi, Aaron Chadha, Alhabib Abbas, Eirina Bourtsoulatze, and Yiannis Andreopoulos. Graph-based spatio-temporal feature learning for neuromorphic vision sensing. IEEE Transactions on Image Processing, 29:9084–9098, 2020.  
 [10]. Simon Schaefer; Daniel Gehrig; Davide Scaramuzza: AEGNN: Asynchronous Event-Based Graph Neural Networks. CVPR2022. [11]. Wang, Ziyun; Ojeda, Fernando Cladera; Bisulco, Anthony; Lee, Daewon; Taylor, Camillo J.; Daniilidis, Kostas et al. (2022): EV-Catcher: High-Speed Object Catching Using Low-Latency Event-Based Neural Networks. In IEEE Robot. Autom. Lett. 7 (4), pp. 8737–8744. DOI: 10.1109/LRA.2022.3188400. 
+[12]. Ze Huang, Li Sun, Cheng Zhao, Song Li, and Songzhi Su. EventPoint: Self-Supervised Interest Point Detection and Description for Event-based Camera. WACV 2023.
+
