@@ -72,6 +72,11 @@ Tencode is first proposed in Huang's WACV2023 paper [12]. This method ecnodes bo
 <img src="https://user-images.githubusercontent.com/14933902/224537529-76323c9b-eda2-44f2-b44b-a473a09ac487.png" width="480" alt="Tencode"/><br/>
 </div>
 
+## Sparse but varying pixels
+Proposed in Tobias Fische's ICRA2023 paper [13]. Used for place recognition. 
+<div align=center>
+<img src="https://raw.githubusercontent.com/LarryDong/event_representation/main/figure/SparseVaryingPixel.png" width="480" alt="Tencode"/><br/>
+</div>
 
 
 # TODO:
@@ -96,4 +101,5 @@ Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/event
 [9]. Yin Bi, Aaron Chadha, Alhabib Abbas, Eirina Bourtsoulatze, and Yiannis Andreopoulos. Graph-based spatio-temporal feature learning for neuromorphic vision sensing. IEEE Transactions on Image Processing, 29:9084–9098, 2020.  
 [10]. Simon Schaefer; Daniel Gehrig; Davide Scaramuzza: AEGNN: Asynchronous Event-Based Graph Neural Networks. CVPR2022. [11]. Wang, Ziyun; Ojeda, Fernando Cladera; Bisulco, Anthony; Lee, Daewon; Taylor, Camillo J.; Daniilidis, Kostas et al. (2022): EV-Catcher: High-Speed Object Catching Using Low-Latency Event-Based Neural Networks. In IEEE Robot. Autom. Lett. 7 (4), pp. 8737–8744. DOI: 10.1109/LRA.2022.3188400. 
 [12]. Ze Huang, Li Sun, Cheng Zhao, Song Li, and Songzhi Su. EventPoint: Self-Supervised Interest Point Detection and Description for Event-based Camera. WACV 2023.
+[13]. and Michael Milford. How Many Events Do You Need. Event-based Visual Place Recognition Using Sparse But Varying Pixels. ICRA 2023.
 
