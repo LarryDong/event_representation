@@ -35,6 +35,16 @@ Also, since the global reference time is used for whole image, the local time-su
 <img src="https://raw.githubusercontent.com/LarryDong/event_representation/main/figure/3dts-sample.png" width="640" alt="time_surface"/><br/>
 </div>
 
+### adaptive time-surface 
+There are lots of adaptive/modified time-surface. I just list some of them when I saw them in papers.  
+1. Varying decay parameter.
+For naive TS, the decay parameter $\tau$ is constant. While some use this $\tau = max(\tau_u - \frac{1}{n} \Sigma_{i=0}^{n}(t-t_{last,i}), \tau_l)$, which make TS decay faster in dense texture, while slower in low-texture scene. Reference: [14].
+
+<div align=center>
+<img src="https://github.com/LarryDong/event_representation/assets/14933902/1d2f5e70-4be1-49c9-a42d-f2eaec5e98b0" width="480" alt="adaptive time_surface"/><br/>
+</div>
+3. 
+
 ## spatiol-temporal voxel grid
 **spatiol-temporal voxel grid**, sometimes called **Stacking Based on Time(SBT)**, **Stacking Based on Number(SBN)**.   
 First proposed by Alex Zhu's [paper](https://openaccess.thecvf.com/content_eccv_2018_workshops/w36/html/Zhu_Unsupervised_Event-based_Optical_Flow_using_Motion_Compensation_ECCVW_2018_paper.html)[2].  
@@ -102,4 +112,4 @@ Some codes are inspired by TU Berlin's Course: [https://github.com/tub-rip/event
 [10]. Simon Schaefer; Daniel Gehrig; Davide Scaramuzza: AEGNN: Asynchronous Event-Based Graph Neural Networks. CVPR2022. [11]. Wang, Ziyun; Ojeda, Fernando Cladera; Bisulco, Anthony; Lee, Daewon; Taylor, Camillo J.; Daniilidis, Kostas et al. (2022): EV-Catcher: High-Speed Object Catching Using Low-Latency Event-Based Neural Networks. In IEEE Robot. Autom. Lett. 7 (4), pp. 8737–8744. DOI: 10.1109/LRA.2022.3188400. 
 [12]. Ze Huang, Li Sun, Cheng Zhao, Song Li, and Songzhi Su. EventPoint: Self-Supervised Interest Point Detection and Description for Event-based Camera. WACV 2023.
 [13]. and Michael Milford. How Many Events Do You Need. Event-based Visual Place Recognition Using Sparse But Varying Pixels. ICRA 2023.
-
+[14]. Zhu S, Tang Z, Yang M, et al. Event Camera-based Visual Odometry for Dynamic Motion Tracking of a Legged Robot Using Adaptive Time Surface[J]. arXiv preprint arXiv:2305.08962, 2023.
